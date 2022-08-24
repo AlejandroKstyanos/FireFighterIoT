@@ -1,33 +1,7 @@
-# FireFighterIoT
-Implementation of Esp8266 to create a FireFighter IoT
-
-## Materials
-
-- 1 x Esp8266
-- 1 x module L298N
-- 4 x Motor DC
-- 1 x voltage module DC
-- 1 x 9v baterry (12v recommended)
-- 1 x Relay module
-- a lot of wires
-
-## Diagram
-
-![diagram](/fig/diagram.png)
-
-## Require
-
-This project needs a controller of blynk to drive the car and shoot the weapon like this:
-
-![diagram](/fig/blynk_diagram.jpeg)
-
-And you have to configure these datastreams in your blynk template:
-
-![diagram](/fig/blynk_datastreams.png)
-
-## Code
-
-``` c++
+/*Nodemcu ESP8266 WIFI control car with the New Blynk app.
+   This code created by the SriTu Hobby team.
+   Home Page
+*/
 
 // Include the library files
 #define BLYNK_PRINT Serial
@@ -143,7 +117,7 @@ void carBackward() {
   digitalWrite(IN4, HIGH);
 }
 void carLeft() {
-  analogWrite(ENA, Speed);
+  analogWrite(ENA, Speed);s
   analogWrite(ENB, Speed);
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
@@ -164,10 +138,3 @@ void carStop() {
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
 }
-```
-
-## Evidence
-
-![diagram](/fig/evidence0.jpeg)
-![diagram](/fig/evidence1.jpeg)
-![diagram](/fig/evidence2.jpeg)
